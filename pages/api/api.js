@@ -26,6 +26,7 @@ cloudinary.config({
   })
 
 export default async function handler(req, res) {
+  var q = req.query
     var v = 0
 
     try {
@@ -33,5 +34,5 @@ export default async function handler(req, res) {
     } catch (err) {
         v = err.stack
     }
-  res.status(200).json(v)
+  res.status(200).json([q,v])
 }
