@@ -1,8 +1,8 @@
 const cloudinary = require('../../lib/cloudinary').v2
 cloudinary.config({
-  cloud_name: "o6", 
-  api_key: "151134495153184",
-  api_secret: "BnWDFbaTnIcxkGmTSd1w5nRbsMk"
+  cloud_name: "o8", 
+  api_key: "297669472464919",
+  api_secret: "6wTepNTccnHrzVOq0Wyu_UedQEY"
 })
  var c = async x => await cloudinary.uploader.upload(x,
     {transformation: [
@@ -20,7 +20,7 @@ cloudinary.config({
         crop: "fit"
       }
       ]}
-    )  .then( r => "https://res.cloudinary.com/o6/" + r.public_id )
+    )  .then( r => "https://res.cloudinary.com/o8/" + r.public_id )
   .catch( err => {
     console.error(err)
   })
