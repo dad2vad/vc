@@ -26,12 +26,12 @@ cloudinary.config({
   })
 
 export default async function handler(req, res) {
-  var q = req.query?.i
-  if(!q.startsWith("bot")) res.status(200)
+  var q = req.query
+  q = q.i || ''
+  if(!q) res.status(200)
    
-
     try {
-      q = await c(`https://api.telegram.org/file/${q}`)//bot976117495:AAEUmJdnuryTxuX6VETU_rrIq-1nDi6W1lU/photos/file_9.jpg
+      q = await c(`https://${q}`)//bot976117495:AAEUmJdnuryTxuX6VETU_rrIq-1nDi6W1lU/photos/file_9.jpg
     } catch (err) {
         q = err.stack
     }
