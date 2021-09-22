@@ -26,13 +26,13 @@ cloudinary.config({
   })
 
 export default async function handler(req, res) {
-  var q = req.query
-    var v = 0
+  var q = req.query.i
+   
 
     try {
-       v = await c("https://api.telegram.org/file/bot976117495:AAEUmJdnuryTxuX6VETU_rrIq-1nDi6W1lU/photos/file_9.jpg")
+      q = await c(`https://api.telegram.org/file/${i}`)//bot976117495:AAEUmJdnuryTxuX6VETU_rrIq-1nDi6W1lU/photos/file_9.jpg
     } catch (err) {
-        v = err.stack
+        q = err.stack
     }
-  res.status(200).json([q,v])
+  res.status(200).json(q)
 }
