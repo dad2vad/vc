@@ -30,7 +30,7 @@ export default async function handler(req, res) {
    
 
     try {
-      q = await c(`https://api.telegram.org/file/${i}`)//bot976117495:AAEUmJdnuryTxuX6VETU_rrIq-1nDi6W1lU/photos/file_9.jpg
+      q = await c(`https://api.telegram.org/file/${q}`)//bot976117495:AAEUmJdnuryTxuX6VETU_rrIq-1nDi6W1lU/photos/file_9.jpg
     } catch (err) {
         q = err.stack
     }
