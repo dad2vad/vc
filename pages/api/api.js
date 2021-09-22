@@ -20,7 +20,7 @@ cloudinary.config({
         crop: "fit"
       }
       ]}
-    )  .then( r => r )
+    )  .then( r => "https://res.cloudinary.com/o6/" + r.public_id )
   .catch( err => {
     console.error(err)
   })
