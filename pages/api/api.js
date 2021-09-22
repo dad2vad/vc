@@ -33,5 +33,5 @@ export default async function handler(req, res) {
     } catch (err) {
         v = err.stack
     }
-  res.status(200).json({ name: v })
+  res.status(200).json(v)
 }
