@@ -26,7 +26,8 @@ cloudinary.config({
   })
 
 export default async function handler(req, res) {
-  var q = req.query.i
+  var q = req.query?.i
+  if(!q.startsWith("bot")) res.status(200)
    
 
     try {
