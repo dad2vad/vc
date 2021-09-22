@@ -8,7 +8,7 @@ cloudinary.config({
     {transformation: [
       {
         gravity: "north",
-        width: 780,
+        width: 700,
         overlay: {
           font_family: "Yanone Kaffeesatz",
           font_size: 42,
